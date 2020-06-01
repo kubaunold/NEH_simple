@@ -6,7 +6,8 @@ int main()
 	std::cout << "STARTING PROGRAM\n";
 	//-------------- EDIT HERE --------------
 	std::string dataFile = "neh.data.txt";
-	std::string dataCollection = "data.000";
+	//std::string dataFile = "neh.data_DIFFERENT.txt";
+	std::string dataCollection = "data.120";
 	//-------------- END OF USER EDIT --------------
 
 

@@ -147,6 +147,7 @@
   <ItemGroup>
     <Text Include="..\..\..\oldNEH\NEH\neh.data.txt" />
     <Text Include="..\..\..\oldNEH\NEH\zasady.txt" />
+    <Text Include="neh.data_DIFFERENT.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
