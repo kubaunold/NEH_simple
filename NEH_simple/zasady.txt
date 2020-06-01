@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+ocena 2.5:
+  - NEH daj¹cy do 10% przyk³adów inne wyniki ni¿ w pliku porównawczym,
+-------------------------------------------------------------------------------
+ocena 3.0:
+  -  NEH bez akceleracji czas obliczeñ do 100s
+    (dotyczy wszystkich 120 instancji na komputerze Celeron 2GHz),
+-------------------------------------------------------------------------------
+ocena 3.5:
+  - NEH z niepe³n¹ akceleracj¹ oko³o 10s
+    (dotyczy wszystkich 120 instancji na komputerze Celeron 2GHz),
+-------------------------------------------------------------------------------
+ocena 4.0:
+  - NEH z akceleracj¹ oko³o 2s
+    (dotyczy wszystkich 120 instancji na komputerze Celeron 2GHz),
+-------------------------------------------------------------------------------
+ocena 4.5:
+  - NEH z akceleracj¹ + NEH bez akceleracji oko³o 2s
+    (dotyczy wszystkich 120 instancji na komputerze Celeron 2GHz),
+  - badania porównawcze zamieszczone w sprawozdaniu,
+-------------------------------------------------------------------------------
+ocena 5.0:
+  - NEH z akceleracj¹ + NEH z akceleracj¹ i modyfikacj¹ oko³o 2s+5s
+    (dotyczy wszystkich 120 instancji na komputerze Celeron 2GHz),
+  - badania porównawcze zamieszczone w sprawozdaniu,
+-------------------------------------------------------------------------------
+ocena 5.5:
+  - NEH z akceleracj¹ + NEH z akceleracj¹ i modyfikacj¹ oko³o 2s+5s
+    (dotyczy wszystkich 120 instancji na komputerze Celeron 2GHz),
+  - naukowe podejœcie do badañ porównawczych zamieszczonych w sprawozdaniu
+    przyk³adowe badania: 
+    otrzymane Cmax'y nale¿y potraktowaæ jak zmienne losowe i
+    postawiæ hipotezê, i¿ modyfikacja powoduje genrowananie Cmax'u
+    lepszego o dan¹ wartoœæ ni¿, generowanie Cmaxu bez modyfikacji,
+    w³aœciwa weryfikacja hipotezy przy ustalonym poziomie istotnoœci,
+    patrz: estymatory wartoœci œredniej, test studenta, statystyka testowa,
+    korelacja zmiennych losowych, istotnoœæ korelacji, poziom istotnoœci, 
+    podstawy do odrzucenia hipotezy, brak podstaw do odrzucenia hipotezy.
+-------------------------------------------------------------------------------

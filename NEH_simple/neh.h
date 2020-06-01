@@ -28,6 +28,20 @@ void neh(std::string fileName, std::string dataSet)
 			file >> matrixData[i][j];
 
 
+	//create 1D array that has rows sorted by weight
+	//x is orderByWeightDescending
+	int* x = new int[N];
+	countByWeightDescending(matrixData, N, M, x);
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include "neh.h"
 
 int main()
 {
@@ -7,6 +8,7 @@ int main()
 	std::string dataFile = "neh.data.txt";
 	std::string dataCollection = "data.000";
 	//-------------- END OF USER EDIT --------------
+
 
 
 	neh(dataFile, dataCollection);
