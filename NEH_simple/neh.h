@@ -2,6 +2,8 @@
 
 #include <fstream>
 #include "helpers.h"
+#include <chrono>
+
 
 void neh(std::string fileName, std::string dataSet)
 {
@@ -27,6 +29,7 @@ void neh(std::string fileName, std::string dataSet)
 		for (int j = 0; j < M; ++j)
 			file >> matrixData[i][j];
 
+	auto start = std::chrono::steady_clock::now();
 
 	//create 1D array that has rows sorted by weight
 	//x is orderByWeightDescending
@@ -40,7 +43,6 @@ void neh(std::string fileName, std::string dataSet)
 
 	*/
 
-	int result;
 
 	//it's corresponding x[] order!
 	int** matrixCmax = new int* [N];
@@ -48,22 +50,51 @@ void neh(std::string fileName, std::string dataSet)
 		matrixCmax[i] = new int[M];
 	}
 
+
+
+	int finalResult;
+
+
 	//index how far we are with simulation
 	//#f - current N taken into account
 	for (int f = 0; f < N; ++f)	//++f wykona siê na koniec pêtli!
 	{
-		//result = countCmax(matrixData, N, M, x, f);
-		// int x[] = { 0, 3, 2, 1 };
-		int* x = new int[4];
-		x[0] = 0;
-		x[1] = 3;
-		x[2] = 2;
-		x[3] = 1;
+		int bestResult = INT_MAX;
+		int* bestX = new int[N];
 
-		result = countCmax2(matrixData, N, M, x, f, matrixCmax);
-		//std::cout << "R= " << result << std::endl;
+		//i	-	# of swaps
+		for (int i = 0; i <= f; ++i)
+		{
+			int currentResult = countCmax2(matrixData, N, M, x, f, matrixCmax);
+			if (currentResult < bestResult)
+			{
+				bestResult = currentResult;
+				for (int n = 0; n <= f; ++n)
+					bestX[n] = x[n];
+			}
+
+			if (f - i > 0)
+				std::swap(x[f - i], x[f - i - 1]);
+			else if (f - i == 0)
+				std::swap(x[0], x[f]);
+		}
+		//now I have bestResult and bestX evaluated
+		finalResult = bestResult;
+		for (int n = 0; n <= f; ++n)
+			x[n] = bestX[n];
+
+		//for (int n = 0; n <= f; ++n)
+		//	std::cout << x[n] << ' ';
+		//std::cout <<"; R= " << finalResult << std::endl;
+
+
+		delete bestX;
+
 	}
 
+	auto end = std::chrono::steady_clock::now();
+
+	std::cout << "Elapsed time in milliseconds: " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms" << std::endl;
 
 
 	for (int i = 0; i < N; ++i) {
